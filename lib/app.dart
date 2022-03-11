@@ -1,5 +1,6 @@
-import 'package:firebase_analytics/firebase_analytics.dart';
+
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import 'home_page.dart';
 
@@ -8,13 +9,13 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: 'Flutter Boilerplate',
       theme: ThemeData(primarySwatch: Colors.blue),
       home: const HomePage(),
-      navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance)
-      ],
+      // navigatorObservers: [
+      //   FirebaseAnalyticsObserver(analytics: FirebaseAnalytics.instance)
+      // ],
     );
   }
 }
